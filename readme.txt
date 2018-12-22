@@ -6,7 +6,7 @@ todo
 由于reg.html里存在一个form表单，并将用户输入的注册信息
 以GET请求形式提交到服务端，那么这时候请求的地址中会包含
 请求的路径以及对应的用户数据，格式如:
-/myweb/reg?username=fanchuanqi&password=123456&nickname=fancq&phonenumber=12345678911
+/myweb/reg?username=ROOT&password=123456&phonenumber=12345678911
 为此，服务端在解析请求时要对请求行中的url部分做进一步的
 解析工作。
 
