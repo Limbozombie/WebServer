@@ -84,7 +84,7 @@ public class HttpResponse {
         sendResponseEntity();
     }
     
-    public void setResponseHeader(String key , String value) {
+    public void addResponseHeader(String key , String value) {
         this.responseHeaders.put(key , value);
     }
     
@@ -95,5 +95,18 @@ public class HttpResponse {
     public void setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         this.statusReason = HttpContext.getStatusReason(statusCode);
+    }
+    
+    /**
+     * 使客户端重定向到指定路径
+     * 重定向要求响应的状态代码为302,也有其他几种细分的状态码具体参考相关文档。
+     * 重定向要求响应头中包含:Location,对应的值就是要求客户端再次发起请求访问的地址。
+     * 重定向的响应可以没有响应正文部分。
+     */
+    public void sendRedirect(String url) {
+        //设置状态代码
+        this.setStatusCode(302);
+        //设置响应头
+        this.addResponseHeader("Location" , url);
     }
 }
