@@ -64,8 +64,8 @@ public class HttpContext {
      * js          application/javascript
      */
     private static void initMimeType() {
-        //     web.xml来自  tomcat安装目录中的conf/web.xml文件
-        File file = new File("src\\main\\resources\\conf\\web.xml");
+        //     tomcat.xml来自  tomcat安装目录中的conf/web.xml文件
+        File file = new File("src\\main\\webapps\\WEB-INF\\tomcat.xml");
         SAXReader saxReader = new SAXReader();
         try {
             Document document = saxReader.read(file);

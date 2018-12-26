@@ -24,7 +24,7 @@ public class WebServer {
     private void start() {
         try {
             while (true) {
-                Socket socket = serverSocket.accept();
+                Socket socket = serverSocket.accept();// todo accept()方法是阻塞的?
                 ClientHandler clientHandler = new ClientHandler(socket);
                 //将任务指派给线程池
                 threadPool.execute(clientHandler);
