@@ -1,43 +1,46 @@
-package Limbo.server.http;
+package application.server.http;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Http协议相关内容定义
- *
+ * <p>
  * 实现客户端请求一个静态资源时
  * 可以在response中对应的Content-Type头给定的值与该静态资源相符。
  */
 public class HttpContext {
-    
-    //回车符
-    public static final int CR = 13;
-    // 换行符
-    public static final int LF = 10;
-    /**
-     * 介质类型映射
-     * key:资源后缀名
-     * value:Content-Type对应的值
-     */
-    private static Map<String, String> mimeType = new HashMap<>();
-    private static Map<Integer, String> statusCodeReason = new HashMap<>();
-    /*
-     * 静态块，通常用来初始化静态成员
-     */
-    static {
-        initMimeType();
-        initStatusCodeReason();
-    }
-    /**
-     * 初始化 状态码--描述 映射
-     */
+
+	//回车符
+	public static final int CR = 13;
+	// 换行符
+	public static final int LF = 10;
+	/**
+	 * 介质类型映射
+	 * key:资源后缀名
+	 * value:Content-Type对应的值
+	 */
+	private static Map<String, String> mimeType = new HashMap<>();
+	private static Map<Integer, String> statusCodeReason = new HashMap<>();
+
+	/*
+	 * 静态块，通常用来初始化静态成员
+	 */
+	static {
+		initMimeType();
+		initStatusCodeReason();
+	}
+
+	/**
+	 * 初始化 状态码--描述 映射
+	 */
     private static void initStatusCodeReason() {
         statusCodeReason.put(200 , "OK");
         statusCodeReason.put(302 , "Moved Temporarily");

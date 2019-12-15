@@ -1,6 +1,6 @@
-package Limbo.mvc.controller;
+package application.mvc.controller;
 
-import Limbo.mvc.annotation.RequestMapping;
+import application.mvc.annotation.RequestMapping;
 
 public class HelloController {
     

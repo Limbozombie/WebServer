@@ -1,7 +1,7 @@
-package Limbo.server.servlet;
+package application.server.servlet;
 
-import Limbo.server.http.HttpRequest;
-import Limbo.server.http.HttpResponse;
+import application.server.http.HttpRequest;
+import application.server.http.HttpResponse;
 
 /**
  * 注册

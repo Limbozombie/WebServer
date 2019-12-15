@@ -1,11 +1,13 @@
-package Limbo.server.http;
+package application.server.http;
 
-import Limbo.server.exception.EmptyRequestException;
+import application.server.exception.EmptyRequestException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.Socket;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -128,7 +130,7 @@ public class HttpRequest {
                     Integer length = Integer.valueOf(requestHeaders.get("Content-Length"));
                     byte[] temp = new byte[length];
                     in.read(temp);
-                    String content = new String(temp , "iso-8859-1");
+                    String content = new String(temp, StandardCharsets.ISO_8859_1);
                     parseParameters(content);
                 } catch (IOException e) {
                     e.printStackTrace();

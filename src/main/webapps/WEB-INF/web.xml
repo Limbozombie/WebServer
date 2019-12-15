@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
-        <servlet-class>Limbo.mvc.web.DispatcherServlet</servlet-class>
+        <servlet-class>application.mvc.web.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>configLocation</param-name>
             <param-value>src/main/resources/conf/mvc.xml</param-value>

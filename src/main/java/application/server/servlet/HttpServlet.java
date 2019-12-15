@@ -1,8 +1,9 @@
-package Limbo.server.servlet;
+package application.server.servlet;
 
-import Limbo.server.http.HttpContext;
-import Limbo.server.http.HttpRequest;
-import Limbo.server.http.HttpResponse;
+import application.server.http.HttpContext;
+import application.server.http.HttpRequest;
+import application.server.http.HttpResponse;
+
 import java.io.File;
 
 public abstract class HttpServlet {

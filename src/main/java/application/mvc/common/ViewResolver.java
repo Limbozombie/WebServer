@@ -1,7 +1,7 @@
-package Limbo.mvc.common;
+package application.mvc.common;
 
-import Limbo.server.http.HttpRequest;
-import Limbo.server.http.HttpResponse;
+import application.server.http.HttpRequest;
+import application.server.http.HttpResponse;
 
 /**
  * 视图解析器

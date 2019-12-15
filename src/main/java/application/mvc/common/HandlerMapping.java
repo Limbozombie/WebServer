@@ -1,6 +1,7 @@
-package Limbo.mvc.common;
+package application.mvc.common;
 
-import Limbo.mvc.annotation.RequestMapping;
+import application.mvc.annotation.RequestMapping;
+
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;

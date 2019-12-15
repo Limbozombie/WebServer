@@ -1,4 +1,4 @@
-package Limbo.server.exception;
+package application.server.exception;
 
 public class EmptyRequestException extends Exception {
     

@@ -1,10 +1,11 @@
-package Limbo.server.core;
+package application.server.core;
 
-import Limbo.server.exception.EmptyRequestException;
-import Limbo.server.http.HttpContext;
-import Limbo.server.http.HttpRequest;
-import Limbo.server.http.HttpResponse;
-import Limbo.server.servlet.HttpServlet;
+import application.server.exception.EmptyRequestException;
+import application.server.http.HttpContext;
+import application.server.http.HttpRequest;
+import application.server.http.HttpResponse;
+import application.server.servlet.HttpServlet;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.Socket;

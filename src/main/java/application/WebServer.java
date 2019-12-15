@@ -1,4 +1,6 @@
-package Limbo.server.core;
+package application;
+
+import application.server.core.ClientHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class WebServer {
-    
+
     private ExecutorService threadPool;
     private ServerSocket serverSocket;
     
