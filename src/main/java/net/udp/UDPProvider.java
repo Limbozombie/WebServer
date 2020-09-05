@@ -15,8 +15,6 @@ import java.net.InetSocketAddress;
 @AllArgsConstructor
 public class UDPProvider {
 
-
-	private final int SENDER_PORT;
 	private final String RECEIVER_IP;
 	private final int RECEIVER_PORT;
 
@@ -26,7 +24,8 @@ public class UDPProvider {
 			throw new IllegalArgumentException("data is null");
 		}
 
-		try (DatagramSocket client = new DatagramSocket(SENDER_PORT)) {
+		//不指定端口时由系统随机指定
+		try (DatagramSocket client = new DatagramSocket()) {
 			byte[] toSend = data.getBytes();
 			int length = toSend.length;
 			InetSocketAddress address = new InetSocketAddress(RECEIVER_IP, RECEIVER_PORT);

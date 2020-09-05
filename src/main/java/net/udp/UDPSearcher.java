@@ -18,6 +18,7 @@ public class UDPSearcher {
 
 
 	public void search() {
+		//指定收发的端口
 		try (DatagramSocket receiver = new DatagramSocket(PORT)) {
 			byte[] container = new byte[1024];
 			DatagramPacket packet = new DatagramPacket(container, container.length);

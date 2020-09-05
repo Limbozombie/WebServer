@@ -34,13 +34,12 @@ public class NetTest {
 
 		String ip = "localhost";
 		int receiver_port = 3333;
-		int sender_port = 2222;
 		String data = "something";
 
 		UDPSearcher searcher = new UDPSearcher(receiver_port);
 		CompletableFuture.runAsync(searcher::search);
 
-		UDPProvider provider = new UDPProvider(sender_port, ip, receiver_port);
+		UDPProvider provider = new UDPProvider(ip, receiver_port);
 		provider.send(data);
 	}
 
