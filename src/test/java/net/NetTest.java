@@ -1,8 +1,8 @@
 package net;
 
 
-import net.io.bio.BIOClient;
-import net.io.bio.BIOServer;
+import net.io.bio.demo.BIOClient;
+import net.io.bio.demo.BIOServer;
 import net.udp.UDPProvider;
 import net.udp.UDPSearcher;
 import org.junit.jupiter.api.Test;
