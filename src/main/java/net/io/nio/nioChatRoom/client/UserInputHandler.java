@@ -1,4 +1,4 @@
-package client;
+package net.io.nio.nioChatRoom.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
